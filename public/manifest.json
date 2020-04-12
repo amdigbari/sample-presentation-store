@@ -1,0 +1,50 @@
+{
+    "name": "Feli",
+    "short_name": "Sepehr",
+    "theme_color": "#890066",
+    "background_color": "#f1efea",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/images/icons/icon-48x72.png",
+            "sizes": "48x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icons/icon-64x96.png",
+            "sizes": "64x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icons/icon-85x128.png",
+            "sizes": "85x128",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icons/icon-96x144.png",
+            "sizes": "96x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icons/icon-101x152.png",
+            "sizes": "101x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icons/icon-128x192.png",
+            "sizes": "128x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icons/icon-256x384.png",
+            "sizes": "256x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/icons/icon-341x512.png",
+            "sizes": "341x512",
+            "type": "image/png"
+        }
+    ]
+}
