@@ -33,7 +33,7 @@ class CustomDocument extends Document {
                     <link rel="stylesheet" href="/styles/tailwind/tailwind.css" />
                 </Head>
 
-                <body dir="rtl">
+                <body className="w-screen h-screen bg-brown-gray" dir="rtl">
                     <Main />
                     <NextScript />
                 </body>
@@ -41,5 +41,4 @@ class CustomDocument extends Document {
         );
     }
 }
-
 export default CustomDocument;
