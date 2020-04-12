@@ -2,6 +2,8 @@ import { FC } from 'react';
 import { AlignJustify } from 'react-feather';
 
 import { openSidebarType } from 'components/Sidebar';
+import SidebarIcon from 'atoms/SidebarIcon';
+import Username from 'atoms/Username';
 
 type responsiveHeaderProps = {
     openSidebar: openSidebarType;
@@ -9,8 +11,10 @@ type responsiveHeaderProps = {
 
 const ResponsiveHeader: FC<responsiveHeaderProps> = ({ openSidebar }) => {
     return (
-        <header className="px-3 py-2 flex items-center bg-tertiary md:hidden">
-            <AlignJustify size={24} className="text-dark" onClick={openSidebar} />
+        <header className="px-3 py-2 flex items-center justify-between bg-tertiary md:hidden shadow">
+            <SidebarIcon onClick={openSidebar} />
+
+            <Username username="Agha Feli" />
         </header>
     );
 };

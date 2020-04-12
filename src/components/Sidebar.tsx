@@ -25,7 +25,13 @@ const Sidebar: FC<sidebarProps> = ({ RenderPage }) => {
     }, []);
 
     return (
-        <ReactSidebar pullRight open={open} touchHandleWidth={10} onSetOpen={openHandler} sidebar={<SidebarComponent />}>
+        <ReactSidebar
+            sidebarClassName="shadow"
+            pullRight
+            open={open}
+            touchHandleWidth={10}
+            onSetOpen={openHandler}
+            sidebar={<SidebarComponent />}>
             <RenderPage openSidebar={openSidebar} />
         </ReactSidebar>
     );
