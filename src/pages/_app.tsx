@@ -9,7 +9,7 @@ const CustomApp: FC<AppProps> = ({ Component, pageProps }) => {
         return (
             <main className="w-full h-full flex flex-col">
                 <ResponsiveHeader openSidebar={openSidebar} />
-                <article className="w-full flex-1 overflow-y-scroll">
+                <article className="w-full flex-1 overflow-y-scroll flex justify-center">
                     <Component {...pageProps} />
                 </article>
             </main>

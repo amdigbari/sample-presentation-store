@@ -13,8 +13,9 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "jsx": "preserve",
-        "baseUrl": "src"
+        "baseUrl": "src",
+        "typeRoots": ["./src/types", "./node_modules/@types"]
     },
-    "exclude": ["node_modules"],
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"]
+    "exclude": ["node_modules", "typings"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js", "src/types/.d.ts"]
 }

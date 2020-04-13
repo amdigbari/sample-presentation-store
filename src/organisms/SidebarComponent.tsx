@@ -8,15 +8,15 @@ type sidebarComponentProps = {};
 const sidebarLinks: Array<navLinkProps> = [
     {
         title: 'لباس',
-        href: '/categories/dress',
+        href: '/categories/dress/',
     },
     {
         title: 'شلوار',
-        href: '/categories/pant',
+        href: '/categories/pant/',
     },
     {
         title: 'طراحی',
-        href: '/categories/design',
+        href: '/design/',
     },
 ];
 
@@ -27,8 +27,8 @@ const SidebarComponent: FC<sidebarComponentProps> = () => {
 
             <div className="w-full h-0 mt-4"></div>
 
-            {sidebarLinks.map(({ title, href }) => (
-                <NavLink title={title} href={href} />
+            {sidebarLinks.map(({ title, href }, index) => (
+                <NavLink title={title} href={href} withBorder key={`${title}-${index}`} />
             ))}
         </div>
     );
