@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { AlignJustify } from 'react-feather';
 
 import { openSidebarType } from 'components/Sidebar';
 import SidebarIcon from 'atoms/SidebarIcon';
 import Username from 'atoms/Username';
+import NavLink from 'atoms/NavLink';
 
 type responsiveHeaderProps = {
     openSidebar: openSidebarType;
@@ -15,6 +15,8 @@ const ResponsiveHeader: FC<responsiveHeaderProps> = ({ openSidebar }) => {
             <SidebarIcon onClick={openSidebar} />
 
             <Username username="Agha Feli" />
+
+            <NavLink href="/purchase/" title="خرید" />
         </header>
     );
 };

@@ -1,7 +1,6 @@
 import { NextPage } from 'next';
-import { FC, useCallback } from 'react';
+import { useCallback } from 'react';
 
-import NavLink from 'atoms/NavLink';
 import Banner from 'atoms/Banner';
 import CustomSlider, { customSliderProps } from 'organisms/CustomSlider';
 
@@ -27,10 +26,6 @@ const Home: NextPage<{}> = () => {
 
     return (
         <div className="flex flex-col container items-center p-3">
-            <div className="w-full flex justify-end">
-                <NavLink href="/purchase/" title="خرید" />
-            </div>
-
             <div className="w-5/6 mt-8">
                 <Banner src="/images/homepage/design_banner.jpg" href="/design/" />
             </div>
