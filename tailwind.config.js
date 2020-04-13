@@ -25,10 +25,8 @@ module.exports = {
                 darkest: '#1f2736',
                 hover: '#3b3b3b55',
             },
-            text: {
-                short: '#7c6a46',
-                long: '#423928',
-            },
+            short: '#7c6a46',
+            long: '#423928',
             'brown-gray': '#f1efea',
         },
     },
