@@ -7,7 +7,7 @@ export type usernameProps = {
 
 const Username: FC<usernameProps> = ({ username }) => {
     return (
-        <Link href={`/users/${username}/`}>
+        <Link href="/users/[username]" as={`/users/${username}`}>
             <a className="text-short transition-colors ease-linear duration-150 hover:text-secondary">{username}</a>
         </Link>
     );

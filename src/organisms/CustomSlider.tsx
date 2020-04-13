@@ -23,7 +23,6 @@ function CustomSlider<T>({ items, renderItem: RenderItem }: customSliderProps<T>
             <ItemsCarousel
                 requestToChangeActive={setActiveItemIndex}
                 activeItemIndex={activeItemIndex}
-                numberOfCards={4}
                 gutter={20}
                 leftChevron={<RenderButton text="<" />}
                 rightChevron={<RenderButton text=">" />}

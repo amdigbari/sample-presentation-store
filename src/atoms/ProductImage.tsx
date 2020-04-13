@@ -6,8 +6,8 @@ type productImageProps = {
 
 const ProductImage: FC<productImageProps> = ({ src }) => {
     return (
-        <div className="w-48 h-48 rounded bg-tertiary overflow-hidden flex items-center justify-center">
-            <img className="object-contain" src={src} alt="product image" />
+        <div className="w-full h-48 rounded bg-tertiary overflow-hidden flex items-center justify-center">
+            <img className="max-w-full max-h-full" src={src} alt="product image" />
         </div>
     );
 };
