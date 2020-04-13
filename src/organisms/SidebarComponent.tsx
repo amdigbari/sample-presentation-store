@@ -25,12 +25,12 @@ const sidebarLinks: Array<navLinkProps> = [
 const SidebarComponent: FC<sidebarComponentProps> = () => {
     return (
         <div className="bg-tertiary h-full w-64 flex flex-col items-center">
-            <StoreBanner src="/images/icons/icon-96x144.png" name="تلویزیونی سپهر" href="/stores/[id]" as="stores/1" />
+            <StoreBanner src="/images/icons/icon-96x144.png" name="تلویزیونی سپهر" href="/stores/[id]" as="/stores/1" />
 
             <div className="w-full h-0 mt-4"></div>
 
             {sidebarLinks.map(({ title, href, as }, index) => (
-                <NavLink title={title} href={href} as={as} withBorder key={`${title}-${index}`} />
+                <NavLink title={title} href={href} {...(as ? { as } : {})} withBorder key={`${title}-${index}`} />
             ))}
         </div>
     );

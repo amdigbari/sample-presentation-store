@@ -1,4 +1,4 @@
-import { ReactElement, useState, FC, useCallback } from 'react';
+import { ReactElement, useState, FC, useCallback, useMemo, useEffect } from 'react';
 import ItemsCarousel from 'react-items-carousel';
 
 export type customSliderProps<T> = {
@@ -8,6 +8,7 @@ export type customSliderProps<T> = {
 
 function CustomSlider<T>({ items, renderItem: RenderItem }: customSliderProps<T>): ReactElement {
     const [activeItemIndex, setActiveItemIndex] = useState<number>(0);
+    const [pageSize, setPageSize] = useState<string>('');
 
     const RenderButton: FC<{ text: string }> = useCallback(
         ({ text }) => (
@@ -18,11 +19,16 @@ function CustomSlider<T>({ items, renderItem: RenderItem }: customSliderProps<T>
         [],
     );
 
+    useEffect(() => {
+        setPageSize(window.innerWidth < 768 ? 'sm' : 'lg');
+    }, []);
+
     return (
         <div style={{ padding: `0 40px` }}>
             <ItemsCarousel
                 requestToChangeActive={setActiveItemIndex}
                 activeItemIndex={activeItemIndex}
+                numberOfCards={pageSize === 'sm' ? 1 : 3}
                 gutter={20}
                 leftChevron={<RenderButton text="<" />}
                 rightChevron={<RenderButton text=">" />}

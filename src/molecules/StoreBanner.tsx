@@ -25,7 +25,7 @@ const StoreBanner: FC<storeBannerProps> = ({ name, src, href, as }) => {
     }, [href]);
 
     return href ? (
-        <Link href={href} as={as}>
+        <Link href={href} {...(as ? { as } : {})}>
             <a className="w-full flex flex-col items-center p-4">
                 <RenderBanner />
             </a>
