@@ -10,6 +10,7 @@
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-feather": "^2.0.4",
+        "react-items-carousel": "^2.8.0",
         "react-sidebar": "^3.0.2",
         "sass": "^1.26.3"
     },
