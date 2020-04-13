@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import ProductImage from 'atoms/ProductImage';
 
-type productType = {
+export type productType = {
     id: number;
     name: string;
     image: string;
@@ -20,7 +20,9 @@ const ProductScreen: NextPage<productScreenType> = ({ product }) => {
         <div className="container flex flex-col items-center">
             <p className="text-short mb-6">نام‌محصول: {product.name}</p>
 
-            <ProductImage src="/images/icons/icon-96x144.jpg" />
+            <div className="w-48">
+                <ProductImage src={product.image} />
+            </div>
 
             <p className="text-short mt-6">برند: {product.store}</p>
 
@@ -40,6 +42,8 @@ const ProductScreen: NextPage<productScreenType> = ({ product }) => {
                     </ul>
                 </div>
             )}
+
+            <button className="bg-primary outline-none px-10 py-4 text-tertiary mt-6">افزودن به سبد خرید</button>
         </div>
     );
 };

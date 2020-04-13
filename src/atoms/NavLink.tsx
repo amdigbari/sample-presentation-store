@@ -6,11 +6,12 @@ export type navLinkProps = {
     href: string | UrlObject;
     title: string;
     withBorder?: boolean;
+    as?: string;
 };
 
-const NavLink: FC<navLinkProps> = ({ title, href, withBorder = false }) => {
+const NavLink: FC<navLinkProps> = ({ title, href, withBorder = false, as }) => {
     return (
-        <Link href={href}>
+        <Link href={href} as={as}>
             <a
                 className={`${
                     withBorder ? 'w-full border-b border-t border-gray px-4 py-2' : ''
